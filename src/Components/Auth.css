@@ -1,0 +1,134 @@
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #a7ff83, #17b978);
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  
+  .auth-flip-card {
+    width: 300px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .auth-flip-card.rotate {
+    transform: rotateY(180deg);
+  }
+  
+  .auth-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+  }
+  
+  .auth-card:first-child {
+    z-index: 2;
+  }
+  
+  .auth-card:nth-child(2) {
+    transform: rotateY(180deg);
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    border: none;
+    border-bottom: 1px solid green;
+    background: transparent;
+    color: #000;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #0f9d58;
+  }
+  
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 12px;
+    color: #0f9d58;
+  }
+  
+  label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    color: green;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-button {
+    background-color: #0f9d58;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-button:hover {
+    background-color: #0c7c44;
+  }
+  
+  .input-container {
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    border: none;
+    border-bottom: 2px solid green;
+    background: transparent;
+    color: #000;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #0f9d58;
+  }
+  
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 12px;
+    color: #0f9d58;
+  }
+  
+  label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    color: green;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
